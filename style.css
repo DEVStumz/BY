@@ -1,0 +1,211 @@
+:root {
+    --color-dark-navy: #2c3e50;
+    --color-light-cream: #f8f7f5;
+    --color-gold: #b8860b;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Lora', serif;
+}
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Lora', serif;
+}
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark-navy);
+    line-height: 1.7;
+    background-color: #fff;
+    scroll-behavior: smooth;
+}
+h1, h2, h3, h4, .hero-headline {
+    font-family: var(--font-heading);
+    color: var(--color-dark-navy);
+    font-weight: 700;
+}
+.text-gold {
+    color: var(--color-gold) !important;
+}
+
+.bg-dark-navy {
+    background-color: var(--color-dark-navy) !important;
+}
+
+.bg-light-cream {
+    background-color: var(--color-light-cream) !important;
+}
+
+.text-dark-navy {
+    color: var(--color-dark-navy) !important;
+}
+
+/* Navigation Bar */
+.navbar-nav .nav-link {
+    color:  #fff;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-gold); /* Primary color highlight */
+}
+
+.navbar-brand {
+    font-size: 2.3rem;
+    font-weight: 500;
+    font-family: var(--font-heading);
+    color:  #fff;
+}
+
+/*Hero Section*/
+/*#hero{
+    min-height: 100vh;
+    z-index: 2;
+    text-align: center;
+    animation: fadeUp 5s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: 0.3s ease;
+}*/
+.pre-header {
+    letter-spacing: 0.15em;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+.hero-headline {
+    font-size: 3.5rem; /* Mobile default */
+    line-height: 1.1;
+}
+.btn-primary {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.btn-primary:hover {
+    background-color: #a8790a;
+    border-color: #a8790a;
+}
+
+/*FEATURED SCENTS*/ 
+.card {
+    width: 90%;
+    height:100%;
+    margin: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+ /* USP Feature Blocks */
+.feature-card {
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+.card img{
+    height: 45vh;
+    width: 100%;
+}
+
+/* How It Works */
+.step-icon-circle {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Testimonial */
+.testimonial-text {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+
+/* Footer */
+footer a {
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: var(--color-gold) !important;
+}
+
+
+/* --- Base Scroll Animation Setup --- */
+
+/* 1. Base Class: Sets the initial invisible state (fade-in-up) */
+.animate-on-scroll.fade-in-up {
+    /* Initial state: Invisible */
+    opacity: 0; 
+    /* Initial state: Moved down 30px */
+    transform: translateY(30px); 
+    /* Define the transition properties for the animation */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+    /* Prevent a sudden flash of unstyled content */
+    will-change: opacity, transform; 
+}
+
+/* 2. Animated Class: The final visible state */
+.animate-on-scroll.animated {
+    /* Final state: Fully visible */
+    opacity: 1; 
+    /* Final state: Moved back to original position */
+    transform: translateY(0); 
+}
+
+/* --- Delay Utilities --- */
+
+/* Delay = X / 10 seconds */
+
+.delay-2 {
+    transition-delay: 0.2s !important;
+}
+
+.delay-3 {
+    transition-delay: 0.3s !important;
+}
+
+.delay-4 {
+    transition-delay: 0.4s !important;
+}
+
+/* Add more if needed, e.g., for a longer staggered effect */
+.delay-5 {
+    transition-delay: 0.5s !important;
+}
+
+.delay-6 {
+    transition-delay: 0.6s !important;
+}
+
+
+/* --- Responsiveness (Desktop Overrides) --- */
+@media (min-width: 992px) {
+    .hero-headline {
+        font-size: 5.5rem;
+    }
+    .subhead-text {
+        font-size: 1.25rem;
+    }
+    #hero {
+        min-height: 90vh;
+    }
+    #products .card{
+        padding-left: 5%;
+    }
+    .testimonial-text {
+        font-size: 1.75rem;
+    }
+}
